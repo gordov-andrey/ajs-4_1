@@ -7,8 +7,12 @@ test.each([
   [15, 'wounded'],
   [14.9, 'critical'],
   [5, 'critical'],
+  ['test', 0],
 ])('health test', (health, expected) => {
-    const result = healthState({name: 'Маг', health});
-  
-    expect(result).toBe(expected);
+  const result = healthState({
+    name: 'Маг',
+    health,
   });
+
+  expect(result).toBe(expected);
+});

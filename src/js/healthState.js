@@ -8,6 +8,7 @@ function healthState(item) {
   if (item.health < 15) {
     return 'critical';
   }
+  return 0;
 }
 
 export default healthState;
